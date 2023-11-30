@@ -14,8 +14,6 @@
       rawFile.open("GET", file, false);
       rawFile.onreadystatechange = function ()
       {
-        console.log("............");
-            
           if(rawFile.readyState === 4)
           {
               if(rawFile.status === 200 || rawFile.status == 0)
