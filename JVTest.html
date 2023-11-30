@@ -8,6 +8,7 @@
   <body>
     <p id="msg">value</p>
     <script  type = "module">
+      import {MY_PI} from "./JVTest.js";
 
     function readTextFile(file){
       var rawFile = new XMLHttpRequest();
@@ -26,7 +27,7 @@
       rawFile.send(null);
     }
 
-    console.log("JVTest ok");
+    console.log("JVTest ok " + MY_PI);
   readTextFile("./test.txt");
 	</script>
   </body>
