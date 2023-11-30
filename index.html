@@ -1,0 +1,34 @@
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p id="msg">value</p>
+    <script  type = "module">
+
+    function readTextFile(file){
+      var rawFile = new XMLHttpRequest();
+      rawFile.open("GET", file, false);
+      rawFile.onreadystatechange = function ()
+      {
+        console.log("............");
+            
+          if(rawFile.readyState === 4)
+          {
+              if(rawFile.status === 200 || rawFile.status == 0)
+              {
+                  //var allText = rawFile.responseText;
+                  //alert(allText);//console.log(allText);
+              }
+          }
+      }
+      rawFile.send(null);
+    }
+
+  readTextFile("https://github.com/ngj319/WebGPU/blob/main/test.txt");
+	</script>
+  </body>
+</html>
