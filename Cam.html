@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>camera test</title>
+  </head>
+  <body>
+    <p id="title">camera test</p>
+    <script  type = "module">
+
+        function readTextFile(file)
+        {
+            var rawFile = new XMLHttpRequest();
+            rawFile.open("GET", file, false);
+            rawFile.onreadystatechange = function ()
+            {
+                if(rawFile.readyState === 4)
+                {
+                    if(rawFile.status === 200 || rawFile.status == 0)
+                    {
+                        var allText = rawFile.responseText;
+                        console.log(allText);
+                    }
+                }
+            }
+                rawFile.send(null);
+        }
+
+        readTextFile("./test.txt");
+	</script>
+  </body>
+</html>
