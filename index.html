@@ -3,30 +3,14 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <style>
+      body { background-color: rgb(182, 215, 255) }
+  </style>
     <title></title>
   </head>
   <body>
-    <p id="msg">value</p>
-    <script  type = "module">
-
-    function readTextFile(file){
-      var rawFile = new XMLHttpRequest();
-      rawFile.open("GET", file, false);
-      rawFile.onreadystatechange = function ()
-      {
-          if(rawFile.readyState === 4)
-          {
-              if(rawFile.status === 200 || rawFile.status == 0)
-              {
-                  var allText = rawFile.responseText;
-                  console.log(allText);
-              }
-          }
-      }
-      rawFile.send(null);
-    }
-
-  readTextFile("./test.txt");
-	</script>
+    <h1></h1>
+    <p></p>
+    <script></script>
   </body>
 </html>
