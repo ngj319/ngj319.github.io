@@ -2,16 +2,17 @@ div.canvas
 { 
     width:600px;
     height:400px;
-    /* float:left; */
+    float:left;
     margin:2px; 
     /*background-color:rgb(96, 145, 242);*/
 }
 
 div.info 
 { 
+    absolute:right;
     width:200px;
     height:400px;
-    /* float:left; */
+    float:left;
     margin:2px; 
     background-color:rgb(98, 144, 236);
 }
