@@ -9,7 +9,6 @@ div.canvas
 
 div.info 
 { 
-    absolute:right;
     width:200px;
     height:400px;
     float:left;
