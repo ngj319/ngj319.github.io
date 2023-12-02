@@ -4,7 +4,7 @@ div.canvas
     height:400px;
     float:left;
     margin:2px; 
-    background-color:rgb(227, 242, 96);
+    /* background-color:rgb(227, 242, 96); */
 }
 
 div.info 
@@ -14,4 +14,10 @@ div.info
     float:left;
     margin:2px; 
     background-color:rgb(98, 144, 236);
+}
+
+canvas 
+{ 
+    width:600px;
+    height:400px;
 }
