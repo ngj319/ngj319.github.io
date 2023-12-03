@@ -65,13 +65,21 @@
         }],
       };
 
+      const uniformArray = new Float32Array([2, 2]);
+      const uniformBuffer = device.createBuffer({
+        label: "grid Uniforms",
+        size: uniformArray.byteLength,
+        usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST,
+      });
+      device.queue.writeBuffer(uniformBuffer, 0, uniformArray);
+
       // Create the bind group layout and pipeline layout.
       const bindGroupLayout = device.createBindGroupLayout({
         label: "Dumb Bind Group Layout",
         entries: [{
           binding: 0,
           visibility: GPUShaderStage.VERTEX,// | GPUShaderStage.COMPUTE,
-          buffer: {} // uniform buffer
+          buffer: {} // grid uniform buffer
         },]
       });
 
@@ -126,15 +134,6 @@
             topology: "line-list"
         }
       });
-
-      
-      //const uniformArray = new Float32Array([GRID_SIZE, GRID_SIZE]);
-      // const uniformBuffer = device.createBuffer({
-        // label: "Grid Uniforms",
-        // size: uniformArray.byteLength,
-        // usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST,
-      // });
-      // device.queue.writeBuffer(uniformBuffer, 0, uniformArray);
 
       //Scene settng
 
