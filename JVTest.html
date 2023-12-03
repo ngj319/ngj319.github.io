@@ -71,7 +71,7 @@
         entries: [{
           binding: 0,
           visibility: GPUShaderStage.VERTEX,// | GPUShaderStage.COMPUTE,
-          buffer: {} // Grid uniform buffer
+          buffer: {} // uniform buffer
         },]
       });
 
@@ -89,7 +89,7 @@
             @location(0) cell: vec2f,
           };
 
-          //@group(0) @binding(0) var<uniform> grid: vec2f;
+          @group(0) @binding(0) var<uniform> grid: vec2f;
 
           @vertex
           fn vertexMain(@location(0) position: vec2f) -> VertexOutput {
@@ -164,7 +164,7 @@
         device.queue.submit([encoder.finish()]);
       }
       updateScene();
-      //setInterval(updateGrid, UPDATE_INTERVAL);
+      //setInterval(updateScene, UPDATE_INTERVAL);
 
       
       /* import {MY_PI} from "./JVTest/Test.js";
