@@ -135,6 +135,15 @@
         }
       });
 
+      const bindGroup = device.createBindGroup({
+          label: "Cell renderer bind group",
+          layout: bindGroupLayout,
+          entries: [{
+            binding: 0,
+            resource: { buffer: uniformBuffer }
+          }],
+        });
+
       //Scene settng
 
       //Drawing
@@ -154,7 +163,7 @@
 
         // Draw the grid.
         pass.setPipeline(axisesPipeline);
-        //pass.setBindGroup(0, bindGroups[step % 2]);
+        pass.setBindGroup(0, bindGroup);
         pass.setVertexBuffer(0, vertexBuffer);
         pass.draw(vertices.length / 2);
 
