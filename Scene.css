@@ -1,7 +1,7 @@
 div.canvas 
 { 
-    width:600px;
-    height:400px;
+    width:800px;
+    height:600px;
     float:left;
     margin:2px; 
     /* background-color:rgb(227, 242, 96); */
@@ -10,7 +10,7 @@ div.canvas
 div.info 
 { 
     width:200px;
-    height:400px;
+    height:600px;
     float:left;
     margin:2px; 
     background-color:rgb(98, 144, 236);
